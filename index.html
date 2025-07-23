@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReadWell - Premium eBook Store</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        .navbar {
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .category-card:hover {
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+        }
+        
+        .product-card:hover {
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+        }
+        
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://placehold.co/1600x500');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Top Bar -->
+    <div class="bg-black text-white text-sm py-1 px-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <div>Prime members enjoy FREE Delivery, exclusive deals and more</div>
+            <div class="space-x-4">
+                <a href="#" class="hover:text-gray-300">Stores</a>
+                <a href="#" class="hover:text-gray-300">Customer Care</a>
+                <a href="#" class="hover:text-gray-300">Track Order</a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Main Navigation -->
+    <nav class="navbar bg-white sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex items-center justify-between">
+                <!-- Move menu button left -->
+                <div class="flex items-center md:hidden">
+                    <button class="text-gray-600">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+                
+                <!-- Search Bar - moved right -->
+                <div class="hidden md:flex flex-1 mx-16">
+                    <div class="relative w-full">
+                        <input type="text" placeholder="Search for products, brands and more" 
+                            class="w-full py-2 px-4 rounded border border-gray-300 focus:outline-none focus:border-pink-500">
+                        <button class="absolute right-0 top-0 h-full px-4 text-gray-500 hover:text-pink-600">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Navigation Links -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#" class="text-sm font-medium hover:text-pink-600">Home</a>
+                    <a href="#" class="text-sm font-medium hover:text-pink-600">Shop</a>
+                    <a href="#" class="text-sm font-medium hover:text-pink-600">Library</a>
+                    <a href="#" class="text-sm font-medium hover:text-pink-600">Profile</a>
+                </div>
+                
+                <!-- Hidden links for desktop -->
+            </div>
+            
+            <!-- Categories -->
+            <div class="hidden md:flex justify-center space-x-8 mt-4">
+                <a href="#" class="text-sm font-medium hover:text-pink-600">Best Sellers</a>
+                <a href="#" class="text-sm font-medium hover:text-pink-600">New Releases</a>
+                <a href="#" class="text-sm font-medium hover:text-pink-600">Fiction</a>
+                <a href="#" class="text-sm font-medium hover:text-pink-600">Non-Fiction</a>
+                <a href="#" class="text-sm font-medium hover:text-pink-600">Kindle</a>
+                <a href="#" class="text-sm font-medium hover:text-pink-600">Deals</a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <div class="hero h-96 flex items-center justify-center text-white">
+        <div class="text-center px-4">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Amazon Kindle Store</h1>
+            <p class="text-xl mb-6">Millions of eBooks. Read anytime, anywhere</p>
+            <button class="bg-pink-600 hover:bg-pink-700 text-white font-medium py-2 px-6 rounded">
+                Shop Now
+            </button>
+        </div>
+    </div>
+    
+    <!-- Categories Section -->
+    <div class="container mx-auto px-4 py-10">
+        <h2 class="text-2xl font-bold mb-6">Shop by category</h2>
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+            <div class="category-card bg-white rounded-lg p-4 text-center shadow-sm cursor-pointer">
+                <div class="h-32 mb-3 flex items-center justify-center">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/b4a46baf-37e9-4149-9d82-d2b4d9b153b6.png" alt="Stack of fiction books with colorful covers" 
+                         class="max-h-full max-w-full">
+                </div>
+                <h3 class="font-medium">Fiction</h3>
+                <p class="text-xs text-gray-500 mt-1">View All</p>
+            </div>
+            <div class="category-card bg-white rounded-lg p-4 text-center shadow-sm cursor-pointer">
+                <div class="h-32 mb-3 flex items-center justify-center">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/ab1d80c5-96a0-4b64-88f8-98e3a8a0f44a.png" alt="Non-fiction books on a wooden table" 
+                         class="max-h-full max-w-full">
+                </div>
+                <h3 class="font-medium">Non-Fiction</h3>
+                <p class="text-xs text-gray-500 mt-1">View All</p>
+            </div>
+            <div class="category-card bg-white rounded-lg p-4 text-center shadow-sm cursor-pointer">
+                <div class="h-32 mb-3 flex items-center justify-center">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/f3120335-8d2d-4bf4-969c-a7d0fd157cf2.png" alt="Biography books with author portraits" 
+                         class="max-h-full max-w-full">
+                </div>
+                <h3 class="font-medium">Biographies</h3>
+                <p class="text-xs text-gray-500 mt-1">View All</p>
+            </div>
+            <div class="category-card bg-white rounded-lg p-4 text-center shadow-sm cursor-pointer">
+                <div class="h-32 mb-3 flex items-center justify-center">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/2b3d63f6-3517-4141-8f1c-a3763e399dca.png" alt="Luxury beauty products including makeup and skincare items" 
+                         class="max-h-full max-w-full">
+                </div>
+                <h3 class="font-medium">Beauty</h3>
+                <p class="text-xs text-gray-500 mt-1">View All</p>
+            </div>
+            <div class="category-card bg-white rounded-lg p-4 text-center shadow-sm cursor-pointer">
+                <div class="h-32 mb-3 flex items-center justify-center">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/274f81f6-0873-4c27-a428-f2449f2aa0c7.png" alt="Stylish home decor items including cushions, lamps and wall art" 
+                         class="max-h-full max-w-full">
+                </div>
+                <h3 class="font-medium">Home</h3>
+                <p class="text-xs text-gray-500 mt-1">View All</p>
+            </div>
+            <div class="category-card bg-white rounded-lg p-4 text-center shadow-sm cursor-pointer">
+                <div class="h-32 mb-3 flex items-center justify-center">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/072c23aa-caa5-40cb-9781-f097dfd27143.png" alt="Collection of sports shoes and activewear for men and women" 
+                         class="max-h-full max-w-full">
+                </div>
+                <h3 class="font-medium">Sports</h3>
+                <p class="text-xs text-gray-500 mt-1">View All</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Deals Section -->
+    <div class="bg-gray-100 py-10">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-2xl font-bold">Top Selling eBooks</h2>
+                <div class="flex items-center">
+                    <span class="text-sm text-gray-600 mr-2">Sort by:</span>
+                    <select class="rounded border border-gray-300 text-sm py-1 px-2 focus:outline-none focus:border-pink-500">
+                        <option>Popularity</option>
+                        <option>Price: Low to High</option>
+                        <option>Price: High to Low</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+                <!-- Product Card 1 -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-sm">
+                    <div class="relative">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/97c7c487-7efa-4562-88e0-c9083665d952.png" alt="Best selling eBook cover with high ratings" 
+                             class="w-full h-64 object-cover">
+                        <div class="absolute top-2 right-2 bg-yellow-400 text-black text-xs px-2 py-1 rounded">
+                            <span class="font-bold">#1</span> Best Seller
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-sm font-medium mb-1">The Silent Patient</h3>
+                        <p class="text-xs text-gray-500 mb-2">By Brand Name</p>
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <span class="text-sm font-bold">₹499</span>
+                                <span class="text-xs text-gray-500 line-through ml-2">₹999</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <span class="text-xs ml-1">4.2</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product Card 2 -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-sm">
+                    <div class="relative">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/49e31242-91de-4b5b-913e-f16fb92daeab.png" alt="Women's floral summer dress with short sleeves and A-line cut" 
+                             class="w-full h-64 object-cover">
+                        <div class="absolute top-2 right-2 bg-pink-600 text-white text-xs px-2 py-1 rounded-full">60% OFF</div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-sm font-medium mb-1">Floral Summer Dress</h3>
+                        <p class="text-xs text-gray-500 mb-2">By Brand Name</p>
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <span class="text-sm font-bold">₹699</span>
+                                <span class="text-xs text-gray-500 line-through ml-2">₹1799</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <span class="text-xs ml-1">4.5</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product Card 3 -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-sm">
+                    <div class="relative">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/0fc2eec9-7f39-47f0-8531-c5a88a811808.png" alt="Premium leather sneakers for men in white with blue accents" 
+                             class="w-full h-64 object-cover">
+                        <div class="absolute top-2 right-2 bg-pink-600 text-white text-xs px-2 py-1 rounded-full">40% OFF</div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-sm font-medium mb-1">Premium Sneakers</h3>
+                        <p class="text-xs text-gray-500 mb-2">By Brand Name</p>
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <span class="text-sm font-bold">₹1999</span>
+                                <span class="text-xs text-gray-500 line-through ml-2">₹3499</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <span class="text-xs ml-1">4.8</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product Card 4 -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-sm">
+                    <div class="relative">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/74718fcc-c335-4a0f-a281-b8ee1e9f2e9c.png" alt="Women's handbag in tan leather with gold hardware and multiple compartments" 
+                             class="w-full h-64 object-cover">
+                        <div class="absolute top-2 right-2 bg-pink-600 text-white text-xs px-2 py-1 rounded-full">30% OFF</div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-sm font-medium mb-1">Leather Handbag</h3>
+                        <p class="text-xs text-gray-500 mb-2">By Brand Name</p>
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <span class="text-sm font-bold">₹2499</span>
+                                <span class="text-xs text-gray-500 line-through ml-2">₹3599</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <span class="text-xs ml-1">4.3</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product Card 5 -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-sm">
+                    <div class="relative">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/98c99b0c-f7df-4e66-b7d9-de5add057cb6.png" alt="Girls' pink winter jacket with faux fur hood and multiple pockets" 
+                             class="w-full h-64 object-cover">
+                        <div class="absolute top-2 right-2 bg-pink-600 text-white text-xs px-2 py-1 rounded-full">55% OFF</div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-sm font-medium mb-1">Winter Jacket</h3>
+                        <p class="text-xs text-gray-500 mb-2">By Brand Name</p>
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <span class="text-sm font-bold">₹899</span>
+                                <span class="text-xs text-gray-500 line-through ml-2">₹1999</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <span class="text-xs ml-1">4.0</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Trending Brands Section -->
+    <div class="container mx-auto px-4 py-10">
+        <h2 class="text-2xl font-bold mb-6">Publishers</h2>
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+            <div class="bg-white rounded-lg overflow-hidden shadow-sm p-4 flex items-center justify-center">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/6aacf2ad-79f8-4042-9cc0-36e9a55ba539.png" alt="Penguin Books publisher logo" 
+                     class="h-10 object-contain">
+            </div>
+            <div class="bg-white rounded-lg overflow-hidden shadow-sm p-4 flex items-center justify-center">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/d90b1732-a49b-4255-b98b-b2128cfda831.png" alt="Adidas logo with three stripes in black" 
+                     class="h-10 object-contain">
+            </div>
+            <div class="bg-white rounded-lg overflow-hidden shadow-sm p-4 flex items-center justify-center">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/4fd9e1c7-b76d-4b60-ac6b-33447a85f8c1.png" alt="Puma leaping cat logo in black and white" 
+                     class="h-10 object-contain">
+            </div>
+            <div class="bg-white rounded-lg overflow-hidden shadow-sm p-4 flex items-center justify-center">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/4d5569b9-6ee8-4770-9d7f-dcde63002aaf.png" alt="Zara fashion brand logo in black serif font" 
+                     class="h-10 object-contain">
+            </div>
+            <div class="bg-white rounded-lg overflow-hidden shadow-sm p-4 flex items-center justify-center">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/29e3c795-2cac-45c7-a2a1-628cfaef7d68.png" alt="H&M brand logo in red capital letters" 
+                     class="h-10 object-contain">
+            </div>
+            <div class="bg-white rounded-lg overflow-hidden shadow-sm p-4 flex items-center justify-center">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/7b59c71d-8a3a-4297-84b5-93d776343fac.png" alt="Levi's red batwing logo with vintage style" 
+                     class="h-10 object-contain">
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-10 pb-6">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-lg font-bold mb-4">ONLINE SHOPPING</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white text-sm">Men</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white text-sm">Women</a></li>
+                        <li><a href="#" class="text-gray-
